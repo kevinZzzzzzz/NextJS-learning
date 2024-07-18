@@ -16,7 +16,11 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className={inter.className}>{children}</body>
+      <body className={inter.className}>
+        <header>头部不会重新渲染</header>
+        <main>{children}</main>
+        <footer>底部不会重新渲染</footer>
+      </body>
     </html>
   );
 }
